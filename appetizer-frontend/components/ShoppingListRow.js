@@ -1,14 +1,17 @@
 
-const skewDeg = '20deg';
-const skewPxOffset = '48px';
+const height = 240;
+const skewDeg = 10;
+const skewPxOffset = 44;
 
 export default ({ shoppingList, images = [], bgColor = "bg-black", className = "" }) => (
-  <div className={`relative block no-underline h-64 font-sans text-white ${className}`}>
+  <div
+    style={{ height }}
+    className={`relative block no-underline h-64 font-sans text-white ${className}`}>
     {/* Background strip:  */}
     <div
       style={{
         width: 'auto',
-        margin: `0 -${skewPxOffset}`,
+        margin: `0 -${skewPxOffset}px`,
       }}
       className="flex absolute pin"
       >
@@ -16,32 +19,18 @@ export default ({ shoppingList, images = [], bgColor = "bg-black", className = "
         <div
           key={`${shoppingList._id}-bg-${index}`}
           style={{
-            transform: `skewX(-${skewDeg})`,
+            backgroundImage: `url(${imageUrl}?h=${240})`,
+            transform: `skewX(-${skewDeg}deg)`,
           }}
           className={[
             'h-full',
             images.length > 1 ? `w-1/${images.length}` : 'w-full',
             `bg-grey${index % 2 ? '' : '-light'}`,
             'overflow-hidden',
+            'bg-cover',
+            'bg-center',
           ].join(' ')}
         >
-          <div
-            style={{
-              backgroundImage: `url(${imageUrl}?h=240)`,
-              transform: `skewX(${skewDeg})`,
-              marginLeft: `-${skewPxOffset}`,
-              padding: `0 ${skewPxOffset}`,
-              boxSizing: 'content-box',
-            }}
-            className={[
-              'w-full',
-              'h-full',
-              '-m-l-6',
-              'bg-cover',
-              'bg-center',
-            ].join(' ')}
-          >
-          </div>
         </div>
       ))}
     </div>
