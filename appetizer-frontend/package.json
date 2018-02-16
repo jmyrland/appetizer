@@ -1,0 +1,28 @@
+{
+  "name": "appetizer-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next & npm run dev:css",
+    "dev:css": "postcss styles/index.css --watch -c styles/config/postcss.config.js -o static/css/bundle.css",
+    "build": "next build & npm run build:css",
+    "build:css": "postcss styles/index.css -c styles/config/postcss.config.js -o static/css/bundle.css",
+    "start": "next start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sanity/client": "^0.125.8",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.6",
+    "cssnano": "^3.10.0",
+    "postcss-cli": "^4.1.1",
+    "postcss-easy-import": "^3.0.0",
+    "tailwindcss": "^0.2.2"
+  }
+}
