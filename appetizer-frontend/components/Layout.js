@@ -9,6 +9,8 @@ export default props => (
       <meta name="robots" content="noindex" />
       <title>Appetizer</title>
 
+      <meta name="theme-color" content="#F6993F" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-title" content="Appetizer" />
       <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/icons/apple-touch-icon-57x57.png" />
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/icons/apple-touch-icon-114x114.png" />
