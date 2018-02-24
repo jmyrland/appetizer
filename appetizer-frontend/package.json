@@ -10,6 +10,9 @@
     "build:css": "postcss styles/index.css -c styles/config/postcss.config.js -o static/css/bundle.css",
     "start": "next start"
   },
+  "now": {
+    "alias": "appetizer.myrland.nu"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
